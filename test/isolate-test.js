@@ -75,7 +75,7 @@ vows.describe('vows/isolate').addBatch({
         topic: generateTopic('--json', 'passing.js'),
         'should be ok': assertExecOk,
         'should have correct output': function (r) {
-            var results = parseResults(r.stdout)
+          var results = parseResults(r.stdout)
 
           assertResultTypePresent(results, 'subject');
           assertResultTypePresent(results, 'end');
@@ -138,7 +138,7 @@ vows.describe('vows/isolate').addBatch({
         topic: generateTopic('--json', '*'),
         'should be not ok': assertExecNotOk,
         'should have correct output': function (r) {
-            var results=  parseResults(r.stdout);
+          var results =  parseResults(r.stdout);
 
           assertResultsFinish(results, {
             total: 16,
